@@ -9,8 +9,18 @@ map("n", "<leader>w", "<cmd>write<cr>", { desc = "Save file" })
 -- Quit
 map("n", "<leader>q", "<cmd>quit<cr>", { desc = "Quit" })
 
--- Netrw
-map("n", "<leader>e", "<cmd>Explore<cr>", { desc = "File explorer" })
+-- File explorer
+map("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", {
+  desc = "Toggle file explorer",
+})
+
+map("n", "<leader>fo", "<cmd>NvimTreeFocus<cr>", {
+  desc = "Focus file explorer",
+})
+
+map("n", "<leader>fc", "<cmd>NvimTreeClose<cr>", {
+  desc = "Close file explorer",
+})
 
 -- Terminal
 map("n", "<leader>t", "<cmd>split | terminal<cr>", { desc = "Terminal" })
